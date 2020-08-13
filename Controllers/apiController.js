@@ -1,3 +1,6 @@
+
+const request = require('request')
+
 exports.postMsg = (req, res) => {
 
     let body = req.body;
@@ -33,6 +36,7 @@ exports.postMsg = (req, res) => {
                     }
                 }
             })
+
         });
 
         // Returns a '200 OK' response to all requests
