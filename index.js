@@ -8,4 +8,4 @@ const apiRoutes = require('./Routes/api')
 app.use(apiRoutes);
 
 
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 1337)
