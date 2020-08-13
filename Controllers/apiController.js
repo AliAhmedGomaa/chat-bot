@@ -17,7 +17,7 @@ exports.postMsg = (req, res) => {
             const msg = webhook_event.message.text
             const restricted = ['تبا لك', 'ثكلتك امك'];
 
-            sentMsg = msg;
+            const sentMsg = msg;
             restricted.forEach(message => {
                 if (sentMsg == message) sentMsg = "شكرا لك"
             })
