@@ -14,7 +14,7 @@ exports.postMsg = (req, res) => {
             // will only ever contain one message, so we get index 0
             let webhook_event = entry.messaging[0];
 
-            const msg = webhook_event.message.text
+            const msg = webhook_event.message
             const restricted = ['تبا لك', 'ثكلتك امك'];
 
             const sentMsg = msg;
