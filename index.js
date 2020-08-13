@@ -3,6 +3,10 @@ const bodyparser = require('body-parser')
 const request = require('request')
 const app = express().use(bodyparser.json())
 
+
+app.get('/',(req, res)=> {
+    res.send("Hello")
+})
 // Adds support for GET requests to our webhook
 app.get('/webhook', (req, res) => {
 
@@ -51,7 +55,7 @@ app.post('/webhook', (req, res) => {
             restricted.forEach(message => {
                 if (sentMsg == message) sentMsg = "شكرا لك"
             })
-            
+
             const senderId = webhook_event.sender.id;
             request({
                 url: "https://graph.facebook.com/v8.0/me/messages?access_token=EAAEMidV7l9cBAMlMbsBb6aZB6LRFgSZBQJAzdpk9mSe2Q1oTG2B1Bqpwr26B6fhruwHZAQtCVZAdnYaacqCiSsBBVGGlfdrTHDrp0UEKOhlWA8jIrd4Qxp8ZBKTK4gHTBNmtLZBjwUBWxF2uag4UiX8kSIOqDwHbpsr2R2qCvnDQZDZD",
